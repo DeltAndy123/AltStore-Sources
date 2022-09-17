@@ -28,4 +28,4 @@ jobs:
           npm i
     
       - name: Update Enmity Custom Icons
-        run: node enmityCustomIcons.js
+        run: node EnmityCustomIcons/enmityCustomIcons.js
