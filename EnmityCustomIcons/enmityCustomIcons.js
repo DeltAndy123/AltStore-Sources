@@ -15,7 +15,7 @@ axios
   )
   .then(async (json) => {
     // Step 2
-    var plumpycord = await axios.get(json.data.assets[0].browser_download_url, {
+    var plumpycord = await axios.get(json.data.assets.find(asset => { return asset.name === "Plumpycord.ipa" }).browser_download_url, {
       responseType: "stream",
     });
 
