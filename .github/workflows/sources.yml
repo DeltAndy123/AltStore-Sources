@@ -23,9 +23,9 @@ jobs:
           cache: 'npm'
         
       - name: Install dependencies
-      - run: |
+        run: |
           cd EnmityCustomIcons
           npm i
     
       - name: Update Enmity Custom Icons
-      - run: node enmityCustomIcons.js
+        run: node enmityCustomIcons.js
