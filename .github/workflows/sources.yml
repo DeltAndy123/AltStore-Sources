@@ -28,4 +28,13 @@ jobs:
           npm i
     
       - name: Update Enmity Custom Icons
-        run: node enmityCustomIcons.js
+        run: |
+          cd EnmityCustomIcons
+          node enmityCustomIcons.js
+          
+      - name: Commit changes
+        run: |
+          git config --global user.name "AltStore Sources"
+          git config --global user.email actions@github.com
+          git add .
+          git diff-index --quiet HEAD || (git commit -m "Update sources" && git push)
