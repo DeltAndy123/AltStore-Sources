@@ -15,7 +15,8 @@ axios
   )
   .then(async (json) => {
     // Step 2
-    var plumpycord = await axios.get(json.data.assets.find(asset => { return asset.name === "Plumpycord.ipa" }).browser_download_url, {
+    var plumpycordjson = json.data.assets.find(asset => { return asset.name === "Plumpycord.ipa" })
+    var plumpycord = await axios.get(plumpycordjson.browser_download_url, {
       responseType: "stream",
     });
 
@@ -41,7 +42,7 @@ axios
           sourceJson.apps[0].version = version;
           sourceJson.apps[0].versionDate = json.data.published_at;
           sourceJson.apps[0].versionDescription = json.data.body;
-          sourceJson.apps[0].size = json.data.assets[0].size;
+          sourceJson.apps[0].size = plumpycordjson.size;
       
           fs.writeFileSync("./plumpycord.json", JSON.stringify(sourceJson, null, 2));
         });
