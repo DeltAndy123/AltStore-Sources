@@ -6,14 +6,14 @@
       "name": "PlumpyCord",
       "bundleIdentifier": "com.hammerandchisel.discord",
       "developerName": "devicarus",
-      "version": "141.0",
-      "versionDate": "2022-08-29T00:47:01Z",
-      "versionDescription": "## Commits\n- 4dea907: 🍱 Added Debrand pack(?) (flower)\n- 817c303: Merge branch 'master' of https://github.com/devicarus/enmity-custom-icons (flower)\n- 4eba023: ⌨️ Added chat input add image (flower)",
+      "version": "146.0",
+      "versionDate": "2022-10-04T01:11:41Z",
+      "versionDescription": "",
       "downloadURL": "https://raw.githubusercontent.com/DeltAndy123/AltStore-Sources/master/EnmityCustomIcons/PlumpyCord.ipa",
       "localizedDescription": "Enmity with Plumpy icons\n\nOriginal Repo: https://github.com/devicarus/enmity-custom-icons",
       "iconURL": "https://files.enmity.app/icon-altstore.png",
       "tintColor": "6D00FF",
-      "size": 75633273,
+      "size": 76096918,
       "screenshotURLs": [
         "https://raw.githubusercontent.com/devicarus/enmity-custom-icons/master/Screenshots/Plumpy.png"
       ]
