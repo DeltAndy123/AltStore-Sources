@@ -43,6 +43,7 @@ axios
           sourceJson.apps[0].versionDate = json.data.published_at;
           sourceJson.apps[0].versionDescription = json.data.body;
           sourceJson.apps[0].size = plumpycordjson.size;
+          sourceJson.apps[0].downloadURL = plumpycordjson.browser_download_url;
       
           fs.writeFileSync("./plumpycord.json", JSON.stringify(sourceJson, null, 2));
         });
