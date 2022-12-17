@@ -47,3 +47,11 @@ jobs:
         run: |
           git add .
           git diff-index --quiet HEAD || (git commit -m "Update sources" && git push)
+
+      - uses: ncipollo/release-action@v1
+        with: 
+          artifacts: "${{ github.workspace }}/uYouPlus/Out/*"
+          body: "$(jq -r '.apps[0].versionDescription' ${{ github.workspace }}/uYouPlus/uyouplus.json)"
+          name: "uYouPlus $(jq -r '.apps[0].version' ${{ github.workspace }}/uYouPlus/uyouplus.json)"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: "v$(jq -r '.apps[0].version' ${{ github.workspace }}/uYouPlus/uyouplus.json)"
