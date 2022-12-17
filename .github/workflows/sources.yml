@@ -45,8 +45,8 @@ jobs:
           version=$(jq -r '.apps[0].version' uYouPlus/uyouplus.json)
           echo "Remote version: $remote"
           echo "Current version: $version"
-          echo "::set-output name=remote::$remote"
-          echo "::set-output name=version::$version"
+          echo "remote=$remote" >> $GITHUB_ENV
+          echo "version=$version" >> $GITHUB_ENV
 
       - name: Update uYouPlus
         id: update
@@ -62,9 +62,10 @@ jobs:
           git add .
           git diff-index --quiet HEAD || (git commit -m "Update sources" && git push)
 
-      - uses: ncipollo/release-action@v1
+      - name: Create Release
+        uses: ncipollo/release-action@v1
         with: 
           artifacts: "${{ github.workspace }}/uYouPlus/Out/*"
-          name: "uYouPlus ${{ steps.update.outputs.version }}"
+          name: "uYouPlus ${{ env.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "uyouplus-${{ steps.update.outputs.version }}"
+          tag: "uyouplus-${{ env.version }}"
