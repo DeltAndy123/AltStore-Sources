@@ -72,6 +72,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with: 
           artifacts: "${{ github.workspace }}/uYouPlus/Out/*"
-          name: "uYouPlus ${{ env.version }}"
+          name: "uYouPlus ${{ steps.update.outputs.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "uyouplus-${{ env.version }}"
+          tag: "uyouplus-${{ steps.update.outputs.version }}"
