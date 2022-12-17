@@ -42,7 +42,7 @@ jobs:
         id: compare
         run: |
           remote=$(curl -s https://api.github.com/repos/qnblackcat/uYouPlus/releases/latest | jq -r '.tag_name' | grep -oP 'v\K(.*?)(?=-)')
-          version=$(jq -r '.apps[0].version' uyouplus.json)
+          version=$(jq -r '.apps[0].version' uYouPlus/uyouplus.json)
           echo "Remote version: $remote"
           echo "Current version: $version"
           echo "::set-env name=version::$version"
