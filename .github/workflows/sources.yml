@@ -45,15 +45,18 @@ jobs:
           version=$(jq -r '.apps[0].version' uYouPlus/uyouplus.json)
           echo "Remote version: $remote"
           echo "Current version: $version"
-          echo "::set-env name=version::$version"
-          echo "::set-env name=remote::$remote"
+          echo "::set-output name=remote::$remote"
+          echo "::set-output name=version::$version"
 
       - name: Update uYouPlus
-        if: ${{ env.version != env.remote }}
+        id: update
+        if: steps.compare.outputs.remote != steps.compare.outputs.version
         run: |
           cd uYouPlus
           bash run.sh
           version=$(jq -r '.apps[0].version' uyouplus.json)
+          echo "New version: $version"
+          echo "::set-output name=version::$version"
       - name: Commit changes
         run: |
           git add .
@@ -62,6 +65,6 @@ jobs:
       - uses: ncipollo/release-action@v1
         with: 
           artifacts: "${{ github.workspace }}/uYouPlus/Out/*"
-          name: "uYouPlus ${{ env.version }}"
+          name: "uYouPlus ${{ steps.update.outputs.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "uyouplus-${{ env.version }}"
+          tag: "uyouplus-${{ steps.update.outputs.version }}"
