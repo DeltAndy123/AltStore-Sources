@@ -3,6 +3,7 @@
 # 2. Download the release file
 # 3. Remove app extensions in the file
 # 4. Read the app Info.plist and modify the source json
+# 5. Publish GitHub release with the uYouPlus IPA file
 
 # Step 1
 echo "Getting the latest release..."
@@ -38,4 +39,10 @@ echo "Done."
 
 echo "Writing the source json..."
 echo $json > uyouplus.json
+echo "Done."
+
+# Step 5
+echo "Publishing release..."
+git tag -a $(echo $json | jq -r '.tag_name') -m "$(echo $release | jq -r '.body')"
+git push origin $(echo $json | jq -r '.tag_name')
 echo "Done."

@@ -1,5 +1,7 @@
-EnmityCustomIcons/node_modules
-EnmityCustomIcons/Info.plist
+/EnmityCustomIcons/node_modules
+/EnmityCustomIcons/Info.plist
 *.ipa
 node_modules/
-uYouPlus/Out/
+/uYouPlus/Out/
+/Azule/
+azule
