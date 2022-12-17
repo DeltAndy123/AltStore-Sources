@@ -1,0 +1,26 @@
+{
+  "name": "uYouPlus",
+  "identifier": "youtube-uyouplus",
+  "apps": [
+    {
+      "name": "uYouPlus (No App Extensions)",
+      "bundleIdentifier": "com.google.ios.youtube",
+      "developerName": "MiRO92 & Qn_",
+      "version": "",
+      "versionDate": "",
+      "versionDescription": "",
+      "downloadURL": "",
+      "localizedDescription": "uYouPlus is a modified version of YouTube with many extra features.\n\nTweaks:\n- uYou: Many features, including remove ads, background playback and download videos\n- iSponsorBlock: Skip sponsors in videos, based on the SponsorBlock API (https://sponsor.ajay.app/)\n- YouPiP: Enable picture-in-picture for videos\n- YTUHD: Enable the ability to watch videos in 2K and 4K\n- YTAutoFullScreen: Automatically switch to full screen when starting a video\n- YTClassicVideoQuality: Revert to old video quality selector\nThese are not all the tweaks, a full list is in https://github.com/qnblackcat/uYouPlus\n\nThis is a modified version of uYouPlus without app extensions, which means that there is no Open in YouTube Safari or share sheet extension.",
+      "iconURL": "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/icon_clipped.png",
+      "tintColor": "e85567",
+      "size": 0,
+      "screenshotURLs": [
+        "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_2393.PNG",
+        "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_1522.PNG",
+        "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_2394.PNG",
+        "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_1523.PNG",
+        "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_2395.PNG"
+      ]
+    }
+  ]
+}
