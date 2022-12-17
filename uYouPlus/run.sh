@@ -31,7 +31,7 @@ json=$(cat uyouplus.json)
 json=$(echo $json | jq ".apps[0].version = \"$(echo $plist | grep -oP '<key>CFBundleShortVersionString<\/key>\s*<string>\K[\d.]*?(?=<\/string>)')\"")
 json=$(echo $json | jq ".apps[0].versionDate = \"$(echo $release | jq -r '.published_at')\"")
 json=$(echo $json | jq ".apps[0].versionDescription = \"$(echo $release | jq -r '.body')\"")
-# json=$(echo $json | jq ".apps[0].downloadURL = \"$(echo $release | jq -r '.assets[0].browser_download_url')\"")
+json=$(echo $json | jq ".apps[0].downloadURL = \"https://github.com/DeltAndy123/AltStore-Sources/releases/download/uyouplus-$(echo $release | jq -r '.tag_name' | grep -oP 'v\K(.*?)(?=-)')/uYouPlus.ipa\"")
 json=$(echo $json | jq ".apps[0].size = $(echo $release | jq -r '.assets[0].size')")
 
 echo "Done."
