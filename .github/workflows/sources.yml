@@ -38,11 +38,22 @@ jobs:
           cd EnmityCustomIcons
           node enmityCustomIcons.js
 
+      - name: Compare uYouPlus version
+        id: compare
+        run: |
+          remote=curl -s https://api.github.com/repos/qnblackcat/uYouPlus/releases/latest | jq -r '.tag_name' | grep -oP 'v\K(.*?)(?=-)'
+          version=$(jq -r '.apps[0].version' uyouplus.json)
+          echo "Remote version: $remote"
+          echo "Current version: $version"
+          echo "::set-env name=version::$version"
+          echo "::set-env name=remote::$remote"
+
       - name: Update uYouPlus
+        if: ${{ env.version != env.remote }}
         run: |
           cd uYouPlus
           bash run.sh
-          
+          version=$(jq -r '.apps[0].version' uyouplus.json)
       - name: Commit changes
         run: |
           git add .
@@ -51,6 +62,6 @@ jobs:
       - uses: ncipollo/release-action@v1
         with: 
           artifacts: "${{ github.workspace }}/uYouPlus/Out/*"
-          name: "uYouPlus"
+          name: "uYouPlus ${{ env.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "uyouplus"
+          tag: "uyouplus-${{ env.version }}"
