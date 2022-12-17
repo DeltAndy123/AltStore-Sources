@@ -46,11 +46,16 @@ jobs:
           echo "Remote version: $remote"
           echo "Current version: $version"
           echo "remote=$remote" >> $GITHUB_ENV
-          echo "version=$version" >> $GITHUB_ENV
+          echo "current=$version" >> $GITHUB_ENV
+          if [ "$remote" != "$version" ]; then
+            echo "Update available"
+          else
+            echo "No update available"
+          fi
 
       - name: Update uYouPlus
         id: update
-        if: steps.compare.outputs.remote != steps.compare.outputs.version
+        if: env.remote != env.current
         run: |
           cd uYouPlus
           bash run.sh
@@ -62,7 +67,8 @@ jobs:
           git add .
           git diff-index --quiet HEAD || (git commit -m "Update sources" && git push)
 
-      - name: Create Release
+      - name: Create Release for uYouPlus
+        if: env.remote != env.current
         uses: ncipollo/release-action@v1
         with: 
           artifacts: "${{ github.workspace }}/uYouPlus/Out/*"
