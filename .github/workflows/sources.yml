@@ -37,7 +37,9 @@ jobs:
           node enmityCustomIcons.js
 
       - name: Update uYouPlus
-        run: bash run.sh
+        run: |
+          cd uYouPlus
+          bash run.sh
           
       - name: Commit changes
         run: |
