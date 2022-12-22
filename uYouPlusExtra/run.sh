@@ -37,5 +37,5 @@ json=$(echo $json | jq ".apps[0].size = $(echo $release | jq -r '.assets[0].size
 echo "Done."
 
 echo "Writing the source json..."
-echo $json > uyouplus.json
+echo $json > uyouplusextra.json
 echo "Done."

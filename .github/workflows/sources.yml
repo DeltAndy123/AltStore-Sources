@@ -107,6 +107,6 @@ jobs:
         uses: ncipollo/release-action@v1
         with: 
           artifacts: "${{ github.workspace }}/uYouPlusExtra/Out/*"
-          name: "uYouPlusExtra ${{ steps.update_uyouplus.outputs.version }}"
+          name: "uYouPlusExtra ${{ steps.update_uyouplusextra.outputs.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "uyouplusextra-${{ steps.update_uyouplus.outputs.version }}"
+          tag: "uyouplusextra-${{ steps.update_uyouplusextra.outputs.version }}"
