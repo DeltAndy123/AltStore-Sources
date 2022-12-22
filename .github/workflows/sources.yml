@@ -39,7 +39,7 @@ jobs:
           node enmityCustomIcons.js
 
       - name: Compare uYouPlus version
-        id: compare
+        id: compare_uyouplus
         run: |
           remote=$(curl -s https://api.github.com/repos/qnblackcat/uYouPlus/releases/latest | jq -r '.tag_name' | grep -oP 'v\K(.*?)(?=-)')
           version=$(jq -r '.apps[0].version' uYouPlus/uyouplus.json)
@@ -54,7 +54,7 @@ jobs:
           fi
 
       - name: Compare uYouPlusExtra version
-        id: compare
+        id: compare_uyouplusextra
         run: |
           remote=$(curl -s https://api.github.com/repos/arichorn/uYouPlusExtra/releases/latest | jq -r '.tag_name' | grep -oP 'v\K(.*?)(?=-)')
           version=$(jq -r '.apps[0].version' uYouPlusExtra/uyouplusextra.json)
