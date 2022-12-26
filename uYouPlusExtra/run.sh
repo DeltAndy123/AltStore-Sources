@@ -30,7 +30,8 @@ echo "Modifying the source json..."
 json=$(cat uyouplusextra.json)
 json=$(echo $json | jq ".apps[0].version = \"$(echo $plist | grep -oP '<key>CFBundleShortVersionString<\/key>\s*<string>\K[\d.]*?(?=<\/string>)')\"")
 json=$(echo $json | jq ".apps[0].versionDate = \"$(echo $release | jq -r '.published_at')\"")
-json=$(echo $json | jq ".apps[0].versionDescription = \"$(echo $release | jq -r '.body')\"")
+changelog=$(echo $release | jq -r '.body')
+json=$(echo $json | jq --arg changelog "$changelog" '.apps[0].versionDescription = $changelog')
 json=$(echo $json | jq ".apps[0].downloadURL = \"https://github.com/DeltAndy123/AltStore-Sources/releases/download/uyouplusextra-$(echo $release | jq -r '.tag_name' | grep -oP 'v\K(.*?)(?=-)')/uYouPlusExtra.ipa\"")
 json=$(echo $json | jq ".apps[0].size = $(echo $release | jq -r '.assets[0].size')")
 
