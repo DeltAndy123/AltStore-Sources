@@ -108,6 +108,7 @@ jobs:
         with: 
           allowUpdates: true
           artifacts: "${{ github.workspace }}/uYouPlus/Out/*"
+          makeLatest: true
           name: "uYouPlus ${{ steps.update_uyouplus.outputs.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "uyouplus-${{ steps.update_uyouplus.outputs.version }}"
@@ -118,6 +119,7 @@ jobs:
         with: 
           allowUpdates: true
           artifacts: "${{ github.workspace }}/uYouPlusExtra/Out/*"
+          makeLatest: true
           name: "uYouPlusExtra ${{ steps.update_uyouplusextra.outputs.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
           tag: "uyouplusextra-${{ steps.update_uyouplusextra.outputs.version }}"
