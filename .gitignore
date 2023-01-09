@@ -2,6 +2,8 @@
 /EnmityCustomIcons/Info.plist
 *.ipa
 node_modules/
-/uYouPlus/Out/
+/*/Out/
 /Azule/
 azule
+/uYouPlusExtra/*.js
+/Ansi.js
