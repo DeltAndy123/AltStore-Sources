@@ -106,6 +106,7 @@ jobs:
         if: env.uyouplus_remote != env.uyouplus_current
         uses: ncipollo/release-action@v1
         with: 
+          allowUpdates: true
           artifacts: "${{ github.workspace }}/uYouPlus/Out/*"
           name: "uYouPlus ${{ steps.update_uyouplus.outputs.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
@@ -115,6 +116,7 @@ jobs:
         if: env.uyouplusextra_remote != env.uyouplusextra_current
         uses: ncipollo/release-action@v1.12.0
         with: 
+          allowUpdates: true
           artifacts: "${{ github.workspace }}/uYouPlusExtra/Out/*"
           name: "uYouPlusExtra ${{ steps.update_uyouplusextra.outputs.version }}"
           token: ${{ secrets.GITHUB_TOKEN }}
