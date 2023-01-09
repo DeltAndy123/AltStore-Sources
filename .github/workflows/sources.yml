@@ -62,8 +62,6 @@ jobs:
       - name: Compare uYouPlusExtra version
         id: compare_uyouplusextra
         run: |
-#          remote=$(curl -s https://api.github.com/repos/arichorn/uYouPlusExtra/releases/latest | jq -r '.tag_name' | grep -oP 'v\K(.*?)(?=-)')
-#          version=$(jq -r '.apps[0].version' uYouPlusExtra/uyouplusextra.json)
           versions=$(node check.js | jq)
           remote=$(echo $versions | jq -r '.remote')
           current=$(echo $versions | jq -r '.current')
