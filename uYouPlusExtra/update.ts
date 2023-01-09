@@ -92,8 +92,9 @@ axios.get('https://api.github.com/repos/arichorn/uYouPlusExtra/releases')
 
     logger.info(Bold('Step 4: ') + DarkGray(`Remove app extensions in the file`))
     fs.mkdirSync('./Out/')
-    const out = await shell.exec('azule -i uYouPlusExtra.ipa -o Out/ -e').catch((e) => {
+    const out = await shell.exec('./azule -i uYouPlusExtra.ipa -o Out/ -e').catch((e) => {
       logger.error(new shell.ShellError(e))
+      process.exit(1)
     })
     if (debug) logger.debug(out)
     logger.info(Bold(Green('Done')))
