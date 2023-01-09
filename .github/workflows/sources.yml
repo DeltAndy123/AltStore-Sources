@@ -31,6 +31,7 @@ jobs:
           git clone https://github.com/Al4ise/Azule ${{ github.workspace }}/Azule
           ln -sf ${{ github.workspace }}/Azule/azule ${{ github.workspace }}/uYouPlus/azule
           ln -sf ${{ github.workspace }}/Azule/azule ${{ github.workspace }}/uYouPlusExtra/azule
+          npm i
 #          cd EnmityCustomIcons
 #          npm i
 
