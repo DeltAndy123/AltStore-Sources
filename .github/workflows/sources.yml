@@ -63,6 +63,7 @@ jobs:
       - name: Compare uYouPlusExtra version
         id: compare_uyouplusextra
         run: |
+          cd uYouPlusExtra/
           versions=$(node check.js | jq)
           remote=$(echo $versions | jq -r '.remote')
           current=$(echo $versions | jq -r '.current')
@@ -91,8 +92,8 @@ jobs:
         if: env.uyouplusextra_remote != env.uyouplusextra_current
         run: |
           cd uYouPlusExtra
-          bash run.sh
-          version=$(jq -r '.apps[0].version' uyouplusextra.json)
+          node update.js
+          version=$(jq -r '.apps[0].versions[0].version' uyouplusextra.json)
           echo "New version: $version"
           echo "::set-output name=version::$version"
 
