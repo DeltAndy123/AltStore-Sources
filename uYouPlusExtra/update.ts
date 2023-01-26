@@ -126,7 +126,12 @@ axios.get('https://api.github.com/repos/arichorn/uYouPlusExtra/releases')
       size: release.assets[0].size
     })
     sourceJSON.apps[0] = app
-    fs.writeFileSync('./uyouplusextra.json', JSON.stringify(sourceJSON, null, 2))
+    fs.writeFileSync('./uyouplusextra.json', [
+      '---',
+      'title: uYouPlusExtra',
+      'permalink: /uyouplusextra/',
+      '---\n'
+    ].join('\n') + JSON.stringify(sourceJSON, null, 2))
     logger.info(Bold(Green('Done')))
 
   })

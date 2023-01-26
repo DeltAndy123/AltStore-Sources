@@ -1,3 +1,11 @@
+# Jenkyll
+_site
+.sass-cache
+.jekyll-cache
+.jekyll-metadata
+vendor
+
+# Apps
 /EnmityCustomIcons/node_modules
 /EnmityCustomIcons/Info.plist
 *.ipa

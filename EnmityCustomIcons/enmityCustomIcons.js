@@ -45,7 +45,12 @@ axios
           sourceJson.apps[0].size = plumpycordjson.size;
           sourceJson.apps[0].downloadURL = plumpycordjson.browser_download_url;
       
-          fs.writeFileSync("./plumpycord.json", JSON.stringify(sourceJson, null, 2));
+          fs.writeFileSync("./plumpycord.json", [
+            '---',
+            'title: PlumpyCord',
+            'permalink: /plumpycord/',
+            '---\n'
+          ].join('\n') + JSON.stringify(sourceJson, null, 2));
         });
         
       })
