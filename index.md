@@ -37,6 +37,24 @@ uYouPlusExtra is a fork of uYouPlus which has features that should've been added
 ***Note**: This source removes app extensions. Sideload the IPA from the [original repository](https://github.com/arichorn/uYouPlusExtra/) to keep them*
 
 
+
+## YouTube iVanced
+```
+https://altstore.deltandy.me/ytivanced
+```
+
+[![alt](https://img.shields.io/badge/Open%20in-AltStore-brightgreen)](altstore://source?url=https://altstore.deltandy.me/ytivanced)
+[![alt](https://img.shields.io/badge/Open%20in-SideStore-%23aa24bf)](sidestore://source?url=https://altstore.deltandy.me/ytivanced)
+
+[![alt](https://img.shields.io/badge/-Browse%20Source-3b878d)](https://altsource.by.lao.sb/browse/?source=https%3A%2F%2Faltstore.deltandy.me%2Fytivanced%2F)
+[![alt](https://img.shields.io/badge/-Open%20GitHub-grey?logo=GitHub)](https://github.com/TherionRO/YouTubeiVanced/)
+
+iVanced for YouTube is a modded application for iPhone user with or without jailbreak. This is mainly for jailed users as we only provide IPA files for you to sideload. iVanced will block all of the annoying ads on YouTube, skip sponsorships, return the legendary dislike button, download youtube videos as MP4 or MP3(audio), customize the theme of the app and many more tweaks for free.
+
+Note : iVanced for YouTube is a fork of [uYou](https://github.com/MiRO92/uYou-for-YouTube)/[uYouPlus](https://github.com/qnblackcat/uYouPlus) based on the latest version of YouTube, a rolling release with extended life support and likely more unstable.
+
+
+
 ## PlumpyCord
 ```
 https://altstore.deltandy.me/plumpycord
