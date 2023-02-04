@@ -65,7 +65,7 @@ axios.get('https://api.github.com/repos/TherionRO/YouTubeiVanced/releases')
       [key: string]: any
     } = {}
     releases.data.forEach((r: { [key: string]: any }) => {
-      let versionMatch = r.tag_name.match(/v(.*?)-/)
+      let versionMatch = r.tag_name.match(/release(.*?)-/)
       if (!versionMatch) {
         logger.error('Could not find version')
         process.exit()
@@ -121,13 +121,13 @@ axios.get('https://api.github.com/repos/TherionRO/YouTubeiVanced/releases')
     app.version = infoPlistJSON.CFBundleShortVersionString
     app.versionDate = release.published_at
     app.versionDescription = release.body
-    app.downloadURL = `https://github.com/DeltAndy123/AltStore-Sources/releases/download/ytivanced-${release.tag_name.match(/v(.*?)-/)[1]}/YTiVanced.ipa`
+    app.downloadURL = `https://github.com/DeltAndy123/AltStore-Sources/releases/download/ytivanced-${release.tag_name.match(/release(.*?)-/)[1]}/YTiVanced.ipa`
     app.size = release.assets[0].size
     app.versions.unshift({
       version: infoPlistJSON.CFBundleShortVersionString,
       date: release.published_at,
       localizedDescription: release.body,
-      downloadURL: `https://github.com/DeltAndy123/AltStore-Sources/releases/download/ytivanced-${release.tag_name.match(/v(.*?)-/)[1]}/YTiVanced.ipa`,
+      downloadURL: `https://github.com/DeltAndy123/AltStore-Sources/releases/download/ytivanced-${release.tag_name.match(/release(.*?)-/)[1]}/YTiVanced.ipa`,
       size: release.assets[0].size
     })
     sourceJSON.apps[0] = app
