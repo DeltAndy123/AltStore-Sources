@@ -77,6 +77,23 @@ jobs:
           else
             echo "No update available"
           fi
+          
+      - name: Compare YTiVanced version
+        id: compare_ytivanced
+        run: |
+          cd YTiVanced/
+          versions=$(node check.js | jq)
+          remote=$(echo $versions | jq -r '.remote')
+          current=$(echo $versions | jq -r '.current')
+          echo "Remote version: $remote"
+          echo "Current version: $current"
+          echo "ytivanced_remote=$remote" >> $GITHUB_ENV
+          echo "ytivanced_current=$current" >> $GITHUB_ENV
+          if [ "$remote" != "$current" ]; then
+            echo "Update available"
+          else
+            echo "No update available"
+          fi
 
       - name: Update uYouPlus
         id: update_uyouplus
@@ -84,9 +101,6 @@ jobs:
         run: |
           cd uYouPlus
           bash run.sh
-          version=$(jq -r '.apps[0].version' uyouplus.json)
-          echo "New version: $version"
-          echo "::set-output name=version::$version"
 
       - name: Update uYouPlusExtra
         id: update_uyouplusextra
@@ -94,9 +108,13 @@ jobs:
         run: |
           cd uYouPlusExtra
           node update.js
-          version=$(jq -r '.apps[0].versions[0].version' uyouplusextra.json)
-          echo "New version: $version"
-          echo "::set-output name=version::$version"
+
+      - name: Update YTiVanced
+        id: update_ytivanced
+        if: env.ytivanced_remote != env.ytivanced_current
+        run: |
+          cd YTiVanced
+          node update.js
 
       - name: Commit changes
         run: |
@@ -110,9 +128,9 @@ jobs:
           allowUpdates: true
           artifacts: "${{ github.workspace }}/uYouPlus/Out/*"
           makeLatest: true
-          name: "uYouPlus ${{ steps.update_uyouplus.outputs.version }}"
+          name: "uYouPlus ${{ env.uyouplus_remote }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "uyouplus-${{ steps.update_uyouplus.outputs.version }}"
+          tag: "uyouplus-${{ env.uyouplus_remote }}"
 
       - name: Create Release for uYouPlusExtra
         if: env.uyouplusextra_remote != env.uyouplusextra_current
@@ -121,6 +139,17 @@ jobs:
           allowUpdates: true
           artifacts: "${{ github.workspace }}/uYouPlusExtra/Out/*"
           makeLatest: true
-          name: "uYouPlusExtra ${{ steps.update_uyouplusextra.outputs.version }}"
+          name: "uYouPlusExtra ${{ env.uyouplusextra_remote }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "uyouplusextra-${{ steps.update_uyouplusextra.outputs.version }}"
+          tag: "uyouplusextra-${{ env.uyouplusextra_remote }}"
+
+      - name: Create Release for YTiVanced
+        if: env.ytivanced_remote != env.ytivanced_current
+        uses: ncipollo/release-action@v1.12.0
+        with: 
+          allowUpdates: true
+          artifacts: "${{ github.workspace }}/YTiVanced/Out/*"
+          makeLatest: true
+          name: "YouTube iVanced ${{ env.ytivanced_remote }}"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tag: "uyouplusextra-${{ env.ytivanced_remote }}"
