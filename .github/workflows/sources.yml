@@ -153,4 +153,4 @@ jobs:
           makeLatest: true
           name: "YouTube iVanced ${{ env.ytivanced_remote }}"
           token: ${{ secrets.GITHUB_TOKEN }}
-          tag: "uyouplusextra-${{ env.ytivanced_remote }}"
+          tag: "ytivanced-${{ env.ytivanced_remote }}"
