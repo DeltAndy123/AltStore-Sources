@@ -10,21 +10,29 @@ permalink: /ytivanced/
       "name": "iVanced for YouTube (No App Extensions)",
       "bundleIdentifier": "com.google.ios.youtube",
       "developerName": "TherionRO",
-      "version": "",
-      "versionDate": "",
-      "versionDescription": "",
-      "downloadURL": "",
+      "version": "18.04.3",
+      "versionDate": "2023-01-30T16:17:02Z",
+      "versionDescription": "iVanced for YouTube 18.04.03 |\r\n\r\nDownload from AppDb : https://appdb.to/app/cydia/1900001075 or download the .ipa file that is present in this release.",
+      "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/ytivanced-18.04.03/YTiVanced.ipa",
       "localizedDescription": "iVanced for YouTube is a modded application for iPhone user with or without jailbreak. This is mainly for jailed users as we only provide IPA files for you to sideload. iVanced will block all of the annoying ads on YouTube, skip sponsorships, return the legendary dislike button, download youtube videos as MP4 or MP3 (audio), customize the theme of the app and many more tweaks for free.\n\nNote : iVanced for YouTube is a fork of uYou/uYouPlus based on the latest version of YouTube, a rolling release with extended life support and likely more unstable. iVanced Source Code: https://github.com/qnblackcat/uYouPlus.",
       "iconURL": "https://static.appdb.to/images/cydia-1900001075-icon-1675095882.png",
       "tintColor": "00a7e8",
-      "size": 0,
+      "size": 109177007,
       "screenshotURLs": [
         "https://static.appdb.to/images/cydia-1900001075-iphone-0-1675095882.png",
         "https://static.appdb.to/images/cydia-1900001075-iphone-1-1675095882.png",
         "https://static.appdb.to/images/cydia-1900001075-iphone-2-1675095882.png",
         "https://static.appdb.to/images/cydia-1900001075-iphone-3-1675095882.png"
       ],
-      "versions": []
+      "versions": [
+        {
+          "version": "18.04.3",
+          "date": "2023-01-30T16:17:02Z",
+          "localizedDescription": "iVanced for YouTube 18.04.03 |\r\n\r\nDownload from AppDb : https://appdb.to/app/cydia/1900001075 or download the .ipa file that is present in this release.",
+          "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/ytivanced-18.04.03/YTiVanced.ipa",
+          "size": 109177007
+        }
+      ]
     }
   ],
   "news": []
