@@ -110,7 +110,12 @@ axios.get('https://api.github.com/repos/arichorn/uYouPlusExtra/releases')
     const infoPlist = zip.readAsText(plistEntry)
     const infoPlistJSON = plist.parse(infoPlist) as { [key: string]: any }
     if (debug) logger.debug(infoPlistJSON)
-    const sourceJSON: Source = JSON.parse(fs.readFileSync('./uyouplusextra.json').toString())
+    const sourceJSON: Source = JSON.parse(
+      fs.readFileSync('./uyouplusextra.json').toString()
+        .split('\n')
+        .slice(4)
+        .join('\n')
+    )
     if (debug) logger.debug(sourceJSON)
     const app = sourceJSON.apps[0]
     app.version = infoPlistJSON.CFBundleShortVersionString

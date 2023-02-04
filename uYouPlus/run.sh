@@ -27,7 +27,7 @@ plist=$(unzip -p ./Out/uYouPlus.ipa Payload/YouTube.app/Info.plist)
 echo "Done."
 
 echo "Modifying the source json..."
-json=$(cat uyouplus.json)
+json=$(sed '5q;d' uyouplus.json)
 json=$(echo $json | jq ".apps[0].version = \"$(echo $plist | grep -oP '<key>CFBundleShortVersionString<\/key>\s*<string>\K[\d.]*?(?=<\/string>)')\"")
 json=$(echo $json | jq ".apps[0].versionDate = \"$(echo $release | jq -r '.published_at')\"")
 changelog=$(echo $release | jq -r '.body')
