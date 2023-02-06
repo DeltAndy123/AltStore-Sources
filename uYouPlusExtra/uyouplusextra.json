@@ -10,14 +10,14 @@ permalink: /uyouplusextra/
       "name": "uYouPlusExtra (No App Extensions)",
       "bundleIdentifier": "com.google.ios.youtube",
       "developerName": "MiRO92, Qn_, & arichorn",
-      "version": "18.03.3",
-      "versionDate": "2023-01-25T01:21:25Z",
-      "versionDescription": "# uYouPlusExtra Features\r\nuYouPlus but adds Additional Features that should’ve been added to the original uYouPlus which were probably denied.\r\n\r\n**arichorn/LowContrastMode:** This tweak helps remove the new contrasty looking UI that was first introducted way back in 2020 August/September.\r\n\r\n**arichorn/LowContrastModeColors:** This tweak is an add-on of LowContrastMode, for users who doesn’t use gray will get a set of colors to switch which changes and improves the UI Customization.\r\n\r\n**arichorn/YTNoModernUI:** This tweak eliminates anything Modern-related, best used along with “YouPiP >> Fake YouTube Version”\r\n\r\n**level3tjg/YTNoHeatwaves:** Turns off the Heatwaves Feature in the video player.\r\n\r\n**PoomSmart/YTNoUpgradeDialog:** Disables the Upgrade Dialog so you won’t be prompt to update the app.\r\n\r\n**PoomSmart/YouMute:** Mute/unmute videos in YouTube directly.\r\n\r\n# uYouPlusExtra App Version & Compatibility\r\nCurrent YouTube IPA: `v17.49.6`\r\nCurrent uYou Version: `v2.3~1`\r\nCurrent App Compatibility: iOS/iPadOS 14.0 or later\r\n\r\n# uYouPlusExtra Release Information\r\n**RELEASE F1:**\r\n- Updated YouTube from 'v17.49.6 to `v18.03.3`\r\n- Added Hide uYou Button (may not work)\r\n- Added Hide Tab Labels (may not work aswell)\r\n- Added Hide YouTube Logo\r\n- Added iPad Layout (I know uYou has this but gotta help y'all out with this option anyways)\r\n- Added Enable FLEX Menu (Debugging use only, use this if you know what you’re doing)\r\n- Updated Submodules\r\n   - Updated YTABConfig to `v1.5.0`\r\n   - Updated YouPiP to `v1.17.19`\r\n   - Updated YTUHD to `v1.3.5`\r\n   - Updated Return YouTube Dislike to `v1.11.1`",
-      "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/uyouplusextra-18.03.3/uYouPlusExtra.ipa",
+      "version": "18.04.3",
+      "versionDate": "2023-02-06T00:07:50Z",
+      "versionDescription": "# uYouPlusExtra Features\r\nuYouPlus but adds Additional Features that should’ve been added to the original uYouPlus which were probably denied.\r\n\r\n**arichorn/LowContrastMode:** This tweak helps remove the new contrasty looking UI that was first introducted way back in 2020 August/September.\r\n\r\n**arichorn/LowContrastModeColors:** This tweak is an add-on of LowContrastMode, for users who doesn’t use gray will get a set of colors to switch which changes and improves the UI Customization.\r\n\r\n**arichorn/YTNoModernUI:** This tweak eliminates anything Modern-related, best used along with “YouPiP >> Fake YouTube Version”\r\n\r\n**level3tjg/YTNoHeatwaves:** Turns off the Heatwaves Feature in the video player.\r\n\r\n**PoomSmart/YTNoUpgradeDialog:** Disables the Upgrade Dialog so you won’t be prompt to update the app.\r\n\r\n**PoomSmart/YouMute:** Mute/unmute videos in YouTube directly.\r\n\r\n**arichorn/iPhoneLayout:** Gives iPad users the ability to use Community Posts and the ability to use the *buggy* iPhone layout.\r\n\r\n# uYouPlusExtra App Version & Compatibility\r\nCurrent YouTube IPA: `v18.04.3`\r\nCurrent uYou Version: `v2.3~1`\r\nCurrent App Compatibility: `iOS/iPadOS 14.0` or later\r\n\r\n# uYouPlusExtra Release Information\r\n**RELEASE F1:**\r\n- Updated YouTube from `v17.03.3` to `v18.04.3`\r\n- Added Hide Notification Button Option\r\n- Added Hide iSponsorBlock Button Option\r\n- Updated all of LowContrastMode’s Options - changed by @dayanch96\r\n- Updated iPhone Layout (Disabled iPhone Keyboard)\r\n- Removed iPad Layout Option",
+      "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/uyouplusextra-18.04.3/uYouPlusExtra.ipa",
       "localizedDescription": "uYouPlusExtra is a modified version of uYouPlus with more features that should've been added to the original uYouPlus which were probably denied. More info here: https://github.com/arichorn/uYouPlusExtra",
       "iconURL": "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/icon_clipped.png",
       "tintColor": "e85567",
-      "size": 109634029,
+      "size": 109707601,
       "screenshotURLs": [
         "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_2393.PNG",
         "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_1522.PNG",
@@ -26,6 +26,13 @@ permalink: /uyouplusextra/
         "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_2395.PNG"
       ],
       "versions": [
+        {
+          "version": "18.04.3",
+          "date": "2023-02-06T00:07:50Z",
+          "localizedDescription": "# uYouPlusExtra Features\r\nuYouPlus but adds Additional Features that should’ve been added to the original uYouPlus which were probably denied.\r\n\r\n**arichorn/LowContrastMode:** This tweak helps remove the new contrasty looking UI that was first introducted way back in 2020 August/September.\r\n\r\n**arichorn/LowContrastModeColors:** This tweak is an add-on of LowContrastMode, for users who doesn’t use gray will get a set of colors to switch which changes and improves the UI Customization.\r\n\r\n**arichorn/YTNoModernUI:** This tweak eliminates anything Modern-related, best used along with “YouPiP >> Fake YouTube Version”\r\n\r\n**level3tjg/YTNoHeatwaves:** Turns off the Heatwaves Feature in the video player.\r\n\r\n**PoomSmart/YTNoUpgradeDialog:** Disables the Upgrade Dialog so you won’t be prompt to update the app.\r\n\r\n**PoomSmart/YouMute:** Mute/unmute videos in YouTube directly.\r\n\r\n**arichorn/iPhoneLayout:** Gives iPad users the ability to use Community Posts and the ability to use the *buggy* iPhone layout.\r\n\r\n# uYouPlusExtra App Version & Compatibility\r\nCurrent YouTube IPA: `v18.04.3`\r\nCurrent uYou Version: `v2.3~1`\r\nCurrent App Compatibility: `iOS/iPadOS 14.0` or later\r\n\r\n# uYouPlusExtra Release Information\r\n**RELEASE F1:**\r\n- Updated YouTube from `v17.03.3` to `v18.04.3`\r\n- Added Hide Notification Button Option\r\n- Added Hide iSponsorBlock Button Option\r\n- Updated all of LowContrastMode’s Options - changed by @dayanch96\r\n- Updated iPhone Layout (Disabled iPhone Keyboard)\r\n- Removed iPad Layout Option",
+          "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/uyouplusextra-18.04.3/uYouPlusExtra.ipa",
+          "size": 109707601
+        },
         {
           "version": "18.03.3",
           "date": "2023-01-25T01:21:25Z",
