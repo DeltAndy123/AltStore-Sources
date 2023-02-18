@@ -85,9 +85,12 @@ jobs:
           cd YTiVanced/
           versions=$(node check.js | jq)
           update=$(echo $versions | jq -r '.update')
+          remote=$(echo $versions | jq -r '.remote')
+          current=$(echo $versions | jq -r '.current')
           echo "Remote version: $remote"
           echo "Current version: $current"
           if [ "$update" = "true" ]
+          then
             echo "Update available"
             echo "ytivanced_remote=$remote" >> $GITHUB_ENV
           else
