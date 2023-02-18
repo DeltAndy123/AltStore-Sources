@@ -84,17 +84,16 @@ jobs:
         run: |
           cd YTiVanced/
           versions=$(node check.js | jq)
-          remote=$(echo $versions | jq -r '.remote')
-          current=$(echo $versions | jq -r '.current')
+          update=$(echo $versions | jq -r '.update')
           echo "Remote version: $remote"
           echo "Current version: $current"
-          echo "ytivanced_remote=$remote" >> $GITHUB_ENV
-          echo "ytivanced_current=$current" >> $GITHUB_ENV
-          if [ "$remote" != "$current" ]; then
+          if [ "$update" = "true" ]
             echo "Update available"
+            echo "ytivanced_remote=$remote" >> $GITHUB_ENV
           else
             echo "No update available"
           fi
+          echo "ytivanced_update=$update" >> $GITHUB_ENV
 
       - name: Update uYouPlus
         id: update_uyouplus
@@ -112,7 +111,7 @@ jobs:
 
       - name: Update YTiVanced
         id: update_ytivanced
-        if: env.ytivanced_remote != env.ytivanced_current
+        if: ${{ env.ytivanced_update == 'true' }}
         run: |
           cd YTiVanced
           node update.js
@@ -145,7 +144,7 @@ jobs:
           tag: "uyouplusextra-${{ env.uyouplusextra_remote }}"
 
       - name: Create Release for YTiVanced
-        if: env.ytivanced_remote != env.ytivanced_current
+        if: ${{ env.ytivanced_update == 'true' }}
         uses: ncipollo/release-action@v1.12.0
         with: 
           allowUpdates: true

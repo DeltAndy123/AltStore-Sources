@@ -131,6 +131,8 @@ axios.get('https://api.github.com/repos/TherionRO/YouTubeiVanced/releases')
       size: release.assets[0].size
     })
     sourceJSON.apps[0] = app
+    if (!sourceJSON.customData) sourceJSON.customData = {}
+    sourceJSON.customData.githubTagName = release.tag_name
     fs.writeFileSync('./ytivanced.json', [
       '---',
       'title: YouTube iVanced',

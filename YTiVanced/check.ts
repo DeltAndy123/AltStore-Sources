@@ -15,9 +15,13 @@ const sourceJSON: Source = JSON.parse(
 const current = sourceJSON.apps[0].versions[0]
 const currentVer = current ? current.version : "0.0.0"
 
+const currentTagName = (sourceJSON.customData || {}).githubTagName || 'release0.0.0-0'
+const remoteTagName = res.data.tag_name
+
 process.stdout.write(JSON.stringify({
   remote: remoteVer,
-  current: currentVer
+  current: currentVer,
+  update: currentTagName != remoteTagName
 }))
 
 })()

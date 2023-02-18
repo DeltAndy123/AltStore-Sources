@@ -190,5 +190,6 @@ interface Source {
   identifier: string,
   sourceURL?: string,
   apps: App[],
-  news: News[]
+  news: News[],
+  customData: any
 }
