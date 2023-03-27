@@ -1,12 +1,18 @@
 import axios from 'axios'
 import fs from 'fs'
+import { Source } from 'sidestore-source-types'
+interface CustomSource extends Source {
+  customData: {
+    [key: string]: any
+  }
+}
 
 (async ()=>{
 
 const res = await axios.get('https://api.github.com/repos/TherionRO/YouTubeiVanced/releases/latest')
 const remoteVer = res.data.tag_name.match(/release(.*?)-?/)[1].replace(/(?<=\d+\.\d+\.)0/, '')
 
-const sourceJSON: Source = JSON.parse(
+const sourceJSON: CustomSource = JSON.parse(
   fs.readFileSync('./ytivanced.json').toString()
     .split('\n')
     .slice(4)

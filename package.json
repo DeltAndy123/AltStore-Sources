@@ -8,6 +8,7 @@
   "devDependencies": {
     "@types/adm-zip": "^0.5.0",
     "@types/node": "^18.11.18",
-    "@types/plist": "^3.0.2"
+    "@types/plist": "^3.0.2",
+    "sidestore-source-types": "^1.0.2"
   }
 }

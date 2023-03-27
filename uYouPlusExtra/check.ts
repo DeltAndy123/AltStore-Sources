@@ -1,5 +1,6 @@
 import axios from 'axios'
 import fs from 'fs'
+import { Source } from 'sidestore-source-types'
 import { logger } from '../Ansi'
 
 (async ()=>{

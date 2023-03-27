@@ -4,6 +4,12 @@ import { exec, ExecException } from 'child_process'
 import { Ansi, logger } from '../Ansi'
 import AdmZip from 'adm-zip'
 import plist from 'plist'
+import { Source } from 'sidestore-source-types'
+interface CustomSource extends Source {
+  customData: {
+    [key: string]: any
+  }
+}
 
 const { Colors: { DarkGray, Green }, Formats: { Bold, Underline } } = Ansi
 
@@ -110,7 +116,7 @@ axios.get('https://api.github.com/repos/TherionRO/YouTubeiVanced/releases')
     const infoPlist = zip.readAsText(plistEntry)
     const infoPlistJSON = plist.parse(infoPlist) as { [key: string]: any }
     if (debug) logger.debug(infoPlistJSON)
-    const sourceJSON: Source = JSON.parse(
+    const sourceJSON: CustomSource = JSON.parse(
       fs.readFileSync('./ytivanced.json').toString()
         .split('\n')
         .slice(4)
