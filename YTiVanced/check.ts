@@ -10,7 +10,7 @@ interface CustomSource extends Source {
 (async ()=>{
 
 const res = await axios.get('https://api.github.com/repos/TherionRO/YouTubeiVanced/releases/latest')
-const remoteVer = res.data.tag_name.match(/release(.*?)-?/)[1].replace(/(?<=\d+\.\d+\.)0/, '')
+const remoteVer = res.data.tag_name.match(/release(.*?)(?:-|$)/)[1].replace(/(?<=\d+\.\d+\.)0/, '')
 
 const sourceJSON: CustomSource = JSON.parse(
   fs.readFileSync('./ytivanced.json').toString()
