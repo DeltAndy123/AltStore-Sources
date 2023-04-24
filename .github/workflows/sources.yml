@@ -22,7 +22,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
-        # Correct code should be "sduo apt update"
       - name: Install dependencies
         run: |
           sudo apt update
