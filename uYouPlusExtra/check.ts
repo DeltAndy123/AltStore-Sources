@@ -1,6 +1,6 @@
 import axios from 'axios'
 import fs from 'fs'
-import { Source } from 'sidestore-source-types'
+import { CustomSource } from '../types'
 import { logger } from '../Ansi'
 
 (async ()=>{
@@ -28,7 +28,7 @@ res.data.forEach((r: { [key: string]: any }) => {
 
 const remoteVer = release.tag_name.match(/v(.*?)-/)[1]
 
-const sourceJSON: Source = JSON.parse(
+const sourceJSON: CustomSource = JSON.parse(
   fs.readFileSync('./uyouplusextra.json').toString()
     .split('\n')
     .slice(4)
@@ -37,9 +37,13 @@ const sourceJSON: Source = JSON.parse(
 const current = sourceJSON.apps[0].versions[0]
 const currentVer = current ? current.version : "0.0.0"
 
+const currentTagName = (sourceJSON.customData || {}).githubTagName || 'release0.0.0-0'
+const remoteTagName = release.tag_name
+
 process.stdout.write(JSON.stringify({
   remote: remoteVer,
-  current: currentVer
+  current: currentVer,
+  update: currentTagName != remoteTagName
 }))
 
 })()

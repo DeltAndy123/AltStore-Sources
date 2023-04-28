@@ -4,7 +4,7 @@ import { exec, ExecException } from 'child_process'
 import { Ansi, logger } from '../Ansi'
 import AdmZip from 'adm-zip'
 import plist from 'plist'
-import type { Source } from 'sidestore-source-types'
+import { CustomSource } from '../types'
 
 const { Colors: { DarkGray, Green }, Formats: { Bold, Underline } } = Ansi
 
@@ -111,7 +111,7 @@ axios.get('https://api.github.com/repos/arichorn/uYouPlusExtra/releases')
     const infoPlist = zip.readAsText(plistEntry)
     const infoPlistJSON = plist.parse(infoPlist) as { [key: string]: any }
     if (debug) logger.debug(infoPlistJSON)
-    const sourceJSON: Source = JSON.parse(
+    const sourceJSON: CustomSource = JSON.parse(
       fs.readFileSync('./uyouplusextra.json').toString()
         .split('\n')
         .slice(4)
@@ -132,6 +132,8 @@ axios.get('https://api.github.com/repos/arichorn/uYouPlusExtra/releases')
       size: release.assets[0].size
     })
     sourceJSON.apps[0] = app
+    if (!sourceJSON.customData) sourceJSON.customData = {}
+    sourceJSON.customData.githubTagName = release.tag_name
     fs.writeFileSync('./uyouplusextra.json', [
       '---',
       'title: uYouPlusExtra',

@@ -68,17 +68,18 @@ jobs:
         run: |
           cd uYouPlusExtra/
           versions=$(node check.js | jq)
+          update=$(echo $versions | jq -r '.update')
           remote=$(echo $versions | jq -r '.remote')
-          current=$(echo $versions | jq -r '.current')
           echo "Remote version: $remote"
           echo "Current version: $current"
-          echo "uyouplusextra_remote=$remote" >> $GITHUB_ENV
-          echo "uyouplusextra_current=$current" >> $GITHUB_ENV
-          if [ "$remote" != "$current" ]; then
+          if [ "$update" = "true" ]
+          then
             echo "Update available"
+            echo "uyouplusextra_remote=$remote" >> $GITHUB_ENV
           else
             echo "No update available"
           fi
+          echo "uyouplusextra_update=$update" >> $GITHUB_ENV
           
       - name: Compare YTiVanced version
         id: compare_ytivanced
@@ -87,7 +88,6 @@ jobs:
           versions=$(node check.js | jq)
           update=$(echo $versions | jq -r '.update')
           remote=$(echo $versions | jq -r '.remote')
-          current=$(echo $versions | jq -r '.current')
           echo "Remote version: $remote"
           echo "Current version: $current"
           if [ "$update" = "true" ]
@@ -108,7 +108,7 @@ jobs:
 
       - name: Update uYouPlusExtra
         id: update_uyouplusextra
-        if: env.uyouplusextra_remote != env.uyouplusextra_current
+        if: ${{ env.uyouplusextra_update == 'true' }}
         run: |
           cd uYouPlusExtra
           node update.js
@@ -137,7 +137,7 @@ jobs:
           tag: "uyouplus-${{ env.uyouplus_remote }}"
 
       - name: Create Release for uYouPlusExtra
-        if: env.uyouplusextra_remote != env.uyouplusextra_current
+        if: ${{ env.uyouplusextra_update == 'true' }}
         uses: ncipollo/release-action@v1.12.0
         with: 
           allowUpdates: true

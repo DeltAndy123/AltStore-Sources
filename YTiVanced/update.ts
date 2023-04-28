@@ -4,12 +4,7 @@ import { exec, ExecException } from 'child_process'
 import { Ansi, logger } from '../Ansi'
 import AdmZip from 'adm-zip'
 import plist from 'plist'
-import { Source } from 'sidestore-source-types'
-interface CustomSource extends Source {
-  customData: {
-    [key: string]: any
-  }
-}
+import { CustomSource } from '../types'
 
 const { Colors: { DarkGray, Green }, Formats: { Bold, Underline } } = Ansi
 

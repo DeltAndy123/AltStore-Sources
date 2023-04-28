@@ -1,11 +1,6 @@
 import axios from 'axios'
 import fs from 'fs'
-import { Source } from 'sidestore-source-types'
-interface CustomSource extends Source {
-  customData: {
-    [key: string]: any
-  }
-}
+import { CustomSource } from '../types'
 
 (async ()=>{
 
