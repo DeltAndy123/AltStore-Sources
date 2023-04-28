@@ -71,7 +71,6 @@ jobs:
           update=$(echo $versions | jq -r '.update')
           remote=$(echo $versions | jq -r '.remote')
           echo "Remote version: $remote"
-          echo "Current version: $current"
           if [ "$update" = "true" ]
           then
             echo "Update available"
@@ -89,7 +88,6 @@ jobs:
           update=$(echo $versions | jq -r '.update')
           remote=$(echo $versions | jq -r '.remote')
           echo "Remote version: $remote"
-          echo "Current version: $current"
           if [ "$update" = "true" ]
           then
             echo "Update available"
