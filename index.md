@@ -15,7 +15,7 @@ https://altstore.deltandy.me/uyouplus
 [![Open In AltStore](https://img.shields.io/badge/Open%20in-AltStore-brightgreen)](altstore://source?url=https://altstore.deltandy.me/uyouplus)
 [![Open In SideStore](https://img.shields.io/badge/Open%20in-SideStore-%23aa24bf)](sidestore://source?url=https://altstore.deltandy.me/uyouplus)
 
-[![Browse Source](https://img.shields.io/badge/-Browse%20Source-3b878d)](https://altsource.by.lao.sb/browse/?source=https%3A%2F%2Faltstore.deltandy.me%2Fuyouplus%2F)
+[![Browse Source](https://img.shields.io/badge/-Browse%20Source-3b878d)](https://therealfoxster.github.io/altsource-viewer/apps?source=https://altstore.deltandy.me/uyouplus)
 [![Open GitHub](https://img.shields.io/badge/-Open%20GitHub-grey?logo=GitHub)](https://github.com/qnblackcat/uYouPlus/)
 
 uYouPlus is a modified version of uYou with additional features, mainly made for jailed devices for sideloading.
@@ -32,7 +32,7 @@ https://altstore.deltandy.me/uyouplusextra
 [![Open In AltStore](https://img.shields.io/badge/Open%20in-AltStore-brightgreen)](altstore://source?url=https://altstore.deltandy.me/uyouplusextra)
 [![Open In SideStore](https://img.shields.io/badge/Open%20in-SideStore-%23aa24bf)](sidestore://source?url=https://altstore.deltandy.me/uyouplusextra)
 
-[![Browse Source](https://img.shields.io/badge/-Browse%20Source-3b878d)](https://altsource.by.lao.sb/browse/?source=https%3A%2F%2Faltstore.deltandy.me%2Fuyouplusextra%2F)
+[![Browse Source](https://img.shields.io/badge/-Browse%20Source-3b878d)](https://therealfoxster.github.io/altsource-viewer/apps?source=https://altstore.deltandy.me/uyouplusextra)
 [![Open GitHub](https://img.shields.io/badge/-Open%20GitHub-grey?logo=GitHub)](https://github.com/arichorn/uYouPlusExtra/)
 
 uYouPlusExtra is a fork of uYouPlus which has features that should've been added to the original uYouPlus which were probably denied.
@@ -49,7 +49,7 @@ https://altstore.deltandy.me/ytivanced
 [![Open In AltStore](https://img.shields.io/badge/Open%20in-AltStore-brightgreen)](altstore://source?url=https://altstore.deltandy.me/ytivanced)
 [![Open In SideStore](https://img.shields.io/badge/Open%20in-SideStore-%23aa24bf)](sidestore://source?url=https://altstore.deltandy.me/ytivanced)
 
-[![Browse Source](https://img.shields.io/badge/-Browse%20Source-3b878d)](https://altsource.by.lao.sb/browse/?source=https%3A%2F%2Faltstore.deltandy.me%2Fytivanced%2F)
+[![Browse Source](https://img.shields.io/badge/-Browse%20Source-3b878d)](https://therealfoxster.github.io/altsource-viewer/apps?source=https://altstore.deltandy.me/ytivanced)
 [![Open GitHub](https://img.shields.io/badge/-Open%20GitHub-grey?logo=GitHub)](https://github.com/TherionRO/YouTubeiVanced/)
 
 iVanced for YouTube is a modded application for iPhone user with or without jailbreak. This is mainly for jailed users as we only provide IPA files for you to sideload. iVanced will block all of the annoying ads on YouTube, skip sponsorships, return the legendary dislike button, download youtube videos as MP4 or MP3(audio), customize the theme of the app and many more tweaks for free.
@@ -66,7 +66,7 @@ https://altstore.deltandy.me/plumpycord
 [![Open In AltStore](https://img.shields.io/badge/Open%20in-AltStore-brightgreen)](altstore://source?url=https://altstore.deltandy.me/plumpycord)
 [![Open In SideStore](https://img.shields.io/badge/Open%20in-SideStore-%23aa24bf)](sidestore://source?url=https://altstore.deltandy.me/plumpycord)
 
-[![Browse Source](https://img.shields.io/badge/-Browse%20Source-3b878d)](https://altsource.by.lao.sb/browse/?source=https%3A%2F%2Faltstore.deltandy.me%2Fplumpycord%2F)
+[![Browse Source](https://img.shields.io/badge/-Browse%20Source-3b878d)](https://therealfoxster.github.io/altsource-viewer/apps?source=https://altstore.deltandy.me/plumpycord)
 [![Open GitHub](https://img.shields.io/badge/-Open%20GitHub-grey?logo=GitHub)](https://github.com/devicarus/enmity-custom-icons/)
 
 Plumpycord is an icon pack for [Enmity for Discord](https://enmity.app/).
