@@ -10,14 +10,14 @@ permalink: /uyouplusextra/
       "name": "uYouPlusExtra (No App Extensions)",
       "bundleIdentifier": "com.google.ios.youtube",
       "developerName": "MiRO92, Qn_, & arichorn",
-      "version": "18.40.1",
-      "versionDate": "2023-10-15T23:58:36Z",
-      "versionDescription": "# How to hide ads ⚠️\r\nThis is how you hide ads.\r\ngo to uYou Tab or General Settings then go to uYou Settings and go to `Other Options` and enable `Remove YouTube Ads`\r\n\r\n# uYouPlusExtra Features\r\nuYouPlus but adds Additional Features that should’ve been added to the original uYouPlus which were probably denied.\r\n\r\n**YTNoModernUI:** This tweak changes and removes some newer ui elements from the app such as Some Rounded Buttons, Red Progress Bar, Gray Buffer Progress & 17.38.10 App Version Number.\r\n\r\n<details>\r\n<summary>More Features...</summary>\r\n\r\n**LowContrastMode:** This tweak helps remove the new contrasty looking UI that was first introducted way back in 2020 August/September. (Tweak made by arichorn)\r\n\r\n**YTNoHeatwaves:** Turns off the Heatwaves Feature in the video player. `(uYouPlus/VideoPlayerOverlayControls)`\r\n\r\n**YTNoUpgradeDialog:** Disables the Upgrade Dialog so you won’t be prompt to update the app.\r\n\r\n**YouMute:** Mute/unmute videos in YouTube directly.\r\n\r\n**iPadLayout:** Gives iPhone users the ability to use the iPad’s Interface and the ability to use the some of the YouTube features that are not on iPhone.\r\n\r\n**iPhoneLayout:** Gives iPad users the ability to use Community Posts, to create Shorts and the ability to use the buggy iPhone layout. but using it in split view mode fixes the ui.\r\n\r\n**HideSponsorBlockButton:** Hide the SponsorBlock Button shown on the Nav Bar. Added by Dayanch96\r\n\r\n**AppSettingsOverlayOptions:** this allows you to remove sections in the app such as `Autoplay`, `Try new features`, `Notifications`, `History and Privacy`, `Live chat` & much more!\r\n\r\n**HideShadowOverlayButtons:** want to remove shadow overlay on the buttons used in the video player? Then toggle this to remove the Shadow Overlay on the buttons Previous, Next, Rewind, Forward.\r\n</details>\r\n\r\n# uYouPlusExtra App Version & Compatibility\r\nCurrent YouTube IPA: `v18.40.1`\r\nCurrent uYou Version: `v3.0.1`\r\nCurrent App Compatibility: `iOS/iPadOS 14.0` or later (may have issues with iOS 17)\r\n\r\n# uYouPlusExtra Release Information\r\n**RELEASE F1:** (October 15th 2023)\r\n- Updated YouTube from `v18.39.1` to `v18.40.1`\r\n- New Options\r\n   - Added `Hide Community Posts`\r\n   - Added `Hide the Download Button under player`\r\n   - Added `Hide Shorts in Channels`\r\n- Updated Options\r\n   - Updated `Hide all videos under player` #155 \r\n\r\n## SHA256:\r\n- **SHA256**: 66bbf284fd9bbb66f7c23c2c0e11ba4ca8c658d2c64e5ca4b173beb1f65b8d98",
-      "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/uyouplusextra-18.40.1/uYouPlusExtra.ipa",
+      "version": "18.41.5",
+      "versionDate": "2023-10-26T07:04:36Z",
+      "versionDescription": "# qnblackcat/uYouPlus\r\nThis is not **uYouPlusExtra**, this is the uYouPlus ipa built using the qnblackcat/main branch on the latest commit.\r\n\r\n# uYouPlus App Version & Compatibility\r\nCurrent YouTube IPA: `v18.41.5`\r\nCurrent uYou Version: `v3.0.1`\r\nCurrent App Compatibility: `iOS/iPadOS 14.0` or later (may have issues with iOS 17)\r\n\r\n# uYouPlus Release Information\r\n**RELEASE F1:** (October 26th 2023)\r\n\r\n## SHA256:\r\n- **SHA256**: c855d7f0ca67801ec4f712ae7618e0756506e1a78bbd6257f806fab1538a8d2c",
+      "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/uyouplusextra-18.41.5/uYouPlusExtra.ipa",
       "localizedDescription": "uYouPlusExtra is a modified version of uYouPlus with more features that should've been added to the original uYouPlus which were probably denied. More info here: https://github.com/arichorn/uYouPlusExtra",
       "iconURL": "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/icon_clipped.png",
       "tintColor": "e85567",
-      "size": 129497579,
+      "size": 119887563,
       "screenshotURLs": [
         "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_2393.PNG",
         "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_1522.PNG",
@@ -26,6 +26,13 @@ permalink: /uyouplusextra/
         "https://raw.githubusercontent.com/qnblackcat/My-AltStore-repo/main/ScreenShot/IMG_2395.PNG"
       ],
       "versions": [
+        {
+          "version": "18.41.5",
+          "date": "2023-10-26T07:04:36Z",
+          "localizedDescription": "# qnblackcat/uYouPlus\r\nThis is not **uYouPlusExtra**, this is the uYouPlus ipa built using the qnblackcat/main branch on the latest commit.\r\n\r\n# uYouPlus App Version & Compatibility\r\nCurrent YouTube IPA: `v18.41.5`\r\nCurrent uYou Version: `v3.0.1`\r\nCurrent App Compatibility: `iOS/iPadOS 14.0` or later (may have issues with iOS 17)\r\n\r\n# uYouPlus Release Information\r\n**RELEASE F1:** (October 26th 2023)\r\n\r\n## SHA256:\r\n- **SHA256**: c855d7f0ca67801ec4f712ae7618e0756506e1a78bbd6257f806fab1538a8d2c",
+          "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/uyouplusextra-18.41.5/uYouPlusExtra.ipa",
+          "size": 119887563
+        },
         {
           "version": "18.40.1",
           "date": "2023-10-15T23:58:36Z",
@@ -192,6 +199,6 @@ permalink: /uyouplusextra/
   ],
   "news": [],
   "customData": {
-    "githubTagName": "v18.40.1-3.0.1"
+    "githubTagName": "v18.41.5-3.0.1-qnblackcat-build"
   }
 }
