@@ -10,14 +10,14 @@ permalink: /ytivanced/
       "name": "iVanced for YouTube (No App Extensions)",
       "bundleIdentifier": "com.google.ios.youtube",
       "developerName": "TherionRO",
-      "version": "19.05.3",
-      "versionDate": "2024-02-05T13:29:40Z",
-      "versionDescription": "iVanced for YouTube 19.05.3 |\r\n\r\nDownload from AppDb : https://appdb.to/app/cydia/1900001075 or download the .ipa file from this release.",
-      "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/ytivanced-19.05.3/YTiVanced.ipa",
+      "version": "19.05.5",
+      "versionDate": "2024-02-07T16:18:13Z",
+      "versionDescription": "iVanced for YouTube 19.05.5 |\r\n\r\nDownload from AppDb : https://appdb.to/app/cydia/1900001075 or download the .ipa file from this release.",
+      "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/ytivanced-19.05.5/YTiVanced.ipa",
       "localizedDescription": "iVanced for YouTube is a modded application for iPhone user with or without jailbreak. This is mainly for jailed users as we only provide IPA files for you to sideload. iVanced will block all of the annoying ads on YouTube, skip sponsorships, return the legendary dislike button, download youtube videos as MP4 or MP3 (audio), customize the theme of the app and many more tweaks for free.\n\nNote : iVanced for YouTube is a fork of uYou/uYouPlus based on the latest version of YouTube, a rolling release with extended life support and likely more unstable. iVanced Source Code: https://github.com/qnblackcat/uYouPlus.",
       "iconURL": "https://static.appdb.to/images/cydia-1900001075-icon-1675095882.png",
       "tintColor": "00a7e8",
-      "size": 134004996,
+      "size": 127403638,
       "screenshotURLs": [
         "https://static.appdb.to/images/cydia-1900001075-iphone-0-1675095882.png",
         "https://static.appdb.to/images/cydia-1900001075-iphone-1-1675095882.png",
@@ -25,6 +25,13 @@ permalink: /ytivanced/
         "https://static.appdb.to/images/cydia-1900001075-iphone-3-1675095882.png"
       ],
       "versions": [
+        {
+          "version": "19.05.5",
+          "date": "2024-02-07T16:18:13Z",
+          "localizedDescription": "iVanced for YouTube 19.05.5 |\r\n\r\nDownload from AppDb : https://appdb.to/app/cydia/1900001075 or download the .ipa file from this release.",
+          "downloadURL": "https://github.com/DeltAndy123/AltStore-Sources/releases/download/ytivanced-19.05.5/YTiVanced.ipa",
+          "size": 127403638
+        },
         {
           "version": "19.05.3",
           "date": "2024-02-05T13:29:40Z",
@@ -72,6 +79,6 @@ permalink: /ytivanced/
   ],
   "news": [],
   "customData": {
-    "githubTagName": "release19.05.3"
+    "githubTagName": "release19.05.5"
   }
 }
